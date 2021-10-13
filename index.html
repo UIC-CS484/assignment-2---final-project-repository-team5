@@ -6,20 +6,23 @@
 body {font-family: Arial, Helvetica, sans-serif;}
 form {border: 3px solid #f1f1f1;}
 
-input[type=username], input[type=password] {
+input[type=text], input[type=password] {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
-  display: inline-block;
+  /*display: inline-table;*/
   border: 1px solid #ccc;
   box-sizing: border-box;
+}
+
+h2{
   text-align: center;
 }
 
 button {
-  background-color: #04AA6D;
+  background-color: green;
   color: white;
-  padding: 14px 20px;
+  padding: 12px 20px;
   margin: 8px 0;
   border: none;
   cursor: pointer;
@@ -28,7 +31,9 @@ button {
 
 
 .container {
-  padding: 16px;
+  width: 60%;
+  padding: 12px;
+  text-align: center;
 }
 
 span.psw {
@@ -40,15 +45,15 @@ span.psw {
 </head>
 <body>
 
-<h2>Login Form</h2>
+<h2>Login Page</h2>
 
-<form action="/action_page.php" method="post">
+<form method="post">
 
   <div class="container">
-    <label for="userUsername"><b>Username</b></label>
+    <label><b>Username</b></label>
     <input type="text" placeholder="Enter Username" name="userUsername" required>
 
-    <label for="userPassword"><b>Password</b></label>
+    <label><b>Password</b></label>
     <input type="password" placeholder="Enter Password" name="userPassword" required>
         
     <button type="submit">Login</button>
@@ -58,7 +63,7 @@ span.psw {
   </div>
 
   <div class="container" style="background-color:white;">
-    <span class="psw">Forgot <a href="#">password?</a></span>
+    <span class="psw"><a href="#">Forgot password?</a></span>
   </div>
 </form>
 

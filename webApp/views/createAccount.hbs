@@ -52,28 +52,32 @@
 </head>
 <body>
 
-<h2>Login Page</h2>
+<h2>Sign Up Page</h2>
 
-    <form action="/createAccount">
-        <div class="container">
-            <label><b>Username</b></label>
-            <input type="text" placeholder="Enter Username" name="userUsername" required>
+<form method="post">
 
-            <label><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="userPassword" required>
+    <div class="container">
+        <label><b>First Name</b></label>
+        <input type="text" placeholder="Enter First Name" name="FirstName" required>
 
-            <button type="submit" id = "Login">Login</button>
-            <button type="button" id = "Sign Up">Sign Up</button>
+        <label><b>Last Name</b></label>
+        <input type="text" placeholder="Enter Last Name" name="LastName" required>
 
-            <!-- <label>
-              <input type="checkbox" checked="checked" name="remember"> Remember me
-            </label> -->
-        </div>
+        <label><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="userUsername" required>
 
-        <div class="container" style="background-color:white;">
-            <span class="psw"><a href="#">Forgot password?</a></span>
-        </div>
-    </form>
+        <label><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="userPassword" required>
+
+        <button type="submit" id = "CreateAccount">Create Account</button>
+
+        <!-- <label>
+          <input type="checkbox" checked="checked" name="remember"> Remember me
+        </label> -->
+    </div>
+
+
+</form>
 
 </body>
 </html>

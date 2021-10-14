@@ -1,8 +1,19 @@
 {
-  "name": "webApp",
+  "name": "webapp",
   "version": "1.0.0",
   "dependencies": {
     "express": "^4.17.1",
     "hbs": "^4.1.2"
-  }
+  },
+  "main": "index.js",
+  "devDependencies": {
+    "nodemon": "^2.0.13"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }

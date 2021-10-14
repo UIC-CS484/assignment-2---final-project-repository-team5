@@ -21,9 +21,13 @@ const updateAccountRouter = require('./routes/updateAccountPage')
 const deleteAccountRouter = require('./routes/deleteAccountPage')
 
 app.use('/',loginRouter)
-app.use('/createaccount',createAccountRouter)
-app.use('/updateaccount',updateAccountRouter)
-app.use('/deleteaccount',deleteAccountRouter)
+app.use('/createAccount',createAccountRouter)
+app.use('/updateAccount',updateAccountRouter)
+app.use('/deleteAccount',deleteAccountRouter)
+
+/*app.get('/createAccount', (req,res) => {
+    console.log("HERE")
+})*/
 
 app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`)

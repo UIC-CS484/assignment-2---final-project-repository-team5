@@ -33,13 +33,14 @@
             margin: 8px 0;
             border: none;
             cursor: pointer;
-            width: 100%;
+            width: 50%;
         }
 
         .container {
             width: 60%;
-            padding: 12px;
+            padding: 12px 300px;
             text-align: center;
+
         }
 
         span.psw {
@@ -53,25 +54,26 @@
 
 <h2>Login Page</h2>
 
-<form method="post">
+    <form action="/createAccount">
+        <div class="container">
+            <label><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="userUsername" required>
 
-    <div class="container">
-        <label><b>Username</b></label>
-        <input type="text" placeholder="Enter Username" name="userUsername" required>
+            <label><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="userPassword" required>
 
-        <label><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" name="userPassword" required>
+            <button type="submit" id = "Login">Login</button>
+            <button type="button" id = "Sign Up">Sign Up</button>
 
-        <button type="submit">Login</button>
-        <!-- <label>
-          <input type="checkbox" checked="checked" name="remember"> Remember me
-        </label> -->
-    </div>
+            <!-- <label>
+              <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label> -->
+        </div>
 
-    <div class="container" style="background-color:white;">
-        <span class="psw"><a href="#">Forgot password?</a></span>
-    </div>
-</form>
+        <div class="container" style="background-color:white;">
+            <span class="psw"><a href="#">Forgot password?</a></span>
+        </div>
+    </form>
 
 </body>
 </html>

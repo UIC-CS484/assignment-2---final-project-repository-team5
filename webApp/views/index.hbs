@@ -49,12 +49,13 @@
         }
 
     </style>
+    <script src="routes/loginPage.js"></script>
 </head>
 <body>
 
 <h2>Login Page</h2>
 
-    <form action="/createAccount">
+    <form action="/">
         <div class="container">
             <label><b>Username</b></label>
             <input type="text" placeholder="Enter Username" name="userUsername" required>
@@ -63,8 +64,6 @@
             <input type="password" placeholder="Enter Password" name="userPassword" required>
 
             <button type="submit" id = "Login">Login</button>
-            <button type="button" id = "Sign Up">Sign Up</button>
-
             <!-- <label>
               <input type="checkbox" checked="checked" name="remember"> Remember me
             </label> -->
@@ -74,6 +73,10 @@
             <span class="psw"><a href="#">Forgot password?</a></span>
         </div>
     </form>
+
+<form action="/createAccount">
+    <button type="submit" id = "Sign Up">Sign Up</button>
+</form>
 
 </body>
 </html>

@@ -15,6 +15,12 @@ router.get('/signup',(req, res)=>{
 
 router.get('/account',(req, res)=>{
     res.send('[USER LOGGED IN] DISPLAYING ACCOUNT INFORMATION')
+    console.log("create account clicked.")
+})
+
+router.get('/createAccount', (req, res) => {
+    res.render('createAccount')
+    console.log("create account clicked.")
 })
 
 module.exports = router

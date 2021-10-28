@@ -1,4 +1,5 @@
 const express = require('express')
+const {route} = require("express/lib/router");
 const router = express.Router()
 
 router.get('/users',(req, res)=>{
@@ -20,7 +21,11 @@ router.get('/account',(req, res)=>{
 
 router.get('/createAccount', (req, res) => {
     res.render('createAccount')
-    console.log("create account clicked.")
+    // console.log("create account clicked.")
+})
+
+router.get('/error',(req,res)=>{
+    res.render('errorPage')
 })
 
 module.exports = router

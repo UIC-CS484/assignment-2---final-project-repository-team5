@@ -16,12 +16,14 @@ const loginRouter = require('./routes/loginPage')
 const createAccountRouter = require('./routes/createAccountPage')
 const updateAccountRouter = require('./routes/updateAccountPage')
 const deleteAccountRouter = require('./routes/deleteAccountPage')
+const errorAccountRouter = require('./routes/errorAccountPage')
 
 // Linking routes to routers. Default route is login.
 app.use('/',loginRouter)
 app.use('/createAccount',createAccountRouter)
 app.use('/updateAccount',updateAccountRouter)
 app.use('/deleteAccount',deleteAccountRouter)
+app.use('/error',errorAccountRouter)
 
 // Render index.hbs view
 app.get('/',(req, res) => {

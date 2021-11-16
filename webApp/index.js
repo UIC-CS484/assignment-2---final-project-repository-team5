@@ -18,21 +18,48 @@ const updateAccountRouter = require('./routes/updateAccountPage')
 const deleteAccountRouter = require('./routes/deleteAccountPage')
 const errorAccountRouter = require('./routes/errorAccountPage')
 
-// Linking routes to routers. Default route is login.
-app.use('/',loginRouter)
+// Linking routes to routers.
+app.use('/login',loginRouter)
 app.use('/createAccount',createAccountRouter)
 app.use('/updateAccount',updateAccountRouter)
 app.use('/deleteAccount',deleteAccountRouter)
 app.use('/error',errorAccountRouter)
 
-// Render index.hbs view
+// Render home.hbs view
 app.get('/',(req, res) => {
-    res.render('index');
+    res.render('home');
+    console.log("/ called")
 })
 
-/*app.get('/createAccount', (req,res) => {
-    console.log("HERE")
-})*/
+// Render login.hbs view
+app.get('/login',(req, res) => {
+    res.render('login');
+    console.log("/login called")
+})
+
+// Render createAccount.hbs view
+app.get('/createAccount', (req,res) => {
+    res.render('createAccount')
+    console.log("/createAccount called")
+})
+
+// Render updateAccount.hbs view
+app.get('/updateAccount', (req,res) => {
+    res.render('updateAccount')
+    console.log("/updateAccount called")
+})
+
+// Render deleteAccount.hbs view
+app.get('deleteAccount', (req,res) => {
+    res.render('deleteAccount')
+    console.log("/deleteAccount called")
+})
+
+// Login Form Submitted
+app.get('/loginFormSubmit',(req, res)=>{
+    console.log(req.query.username, req.query.password)
+    //authenticate, re-route on success and failure
+})
 
 // Run server
 app.listen(port, () => {

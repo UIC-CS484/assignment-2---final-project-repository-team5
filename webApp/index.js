@@ -17,6 +17,8 @@ const createAccountRouter = require('./routes/createAccountPage')
 const updateAccountRouter = require('./routes/updateAccountPage')
 const deleteAccountRouter = require('./routes/deleteAccountPage')
 const errorAccountRouter = require('./routes/errorAccountPage')
+const dashboardRouter = require('./routes/dashboard')
+const axios = require("axios");
 
 // Linking routes to routers.
 app.use('/login',loginRouter)
@@ -24,6 +26,8 @@ app.use('/createAccount',createAccountRouter)
 app.use('/updateAccount',updateAccountRouter)
 app.use('/deleteAccount',deleteAccountRouter)
 app.use('/error',errorAccountRouter)
+app.use('/dashboard',dashboardRouter)
+
 
 // Render home.hbs view
 app.get('/',(req, res) => {
@@ -59,6 +63,38 @@ app.get('deleteAccount', (req,res) => {
 app.get('/loginFormSubmit',(req, res)=>{
     console.log(req.query.username, req.query.password)
     //authenticate, re-route on success and failure
+})
+
+app.get('/dashboard',(req, res)=>{
+    // Make API call using axios
+    // Get the data
+    const options = {
+        method: 'GET',
+        url: 'https://shazam.p.rapidapi.com/search',
+        params: {term: 'kiss the rain', locale: 'en-US', offset: '0', limit: '5'},
+        headers: {
+            'x-rapidapi-host': 'shazam.p.rapidapi.com',
+            'x-rapidapi-key': '7ae14268e5msh241a0d6655ae5fdp1aaa57jsnefdf711c7928'
+        }
+    };
+
+
+    showCharacters = characters => {
+        const charactersDiv = document.querySelector('#rick-and-morty-characters');
+        characters.forEach(character => {
+            const characterElement = document.createElement('p');
+            characterElement.innerText = `Character Name: Annsh}`;
+            charactersDiv.append(characterElement);
+        });
+    }
+
+    axios.request(options).then(function (response) {
+        console.log(JSON.stringify(response.data));
+        res.render('dashboard', {data:response.data})
+    }).catch(function (error) {
+        console.error(error);
+    });
+
 })
 
 // Run server

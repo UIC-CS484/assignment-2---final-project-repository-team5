@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b529a05c-5a51-4d75-bbf0-3e1edac973e6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webApp/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webApp/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/webApp/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +42,7 @@
       <option name="presentableId" value="Default" />
       <updated>1634261009325</updated>
       <workItem from="1634261010782" duration="1112000" />
+      <workItem from="1637526082052" duration="72000" />
     </task>
     <servers />
   </component>
@@ -60,5 +59,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

@@ -5,7 +5,13 @@
 <body>
     <div id="rick-and-morty-characters">
         <h1>WELCOME TO YOUR DASHBOARD!!!</h1>
-        <p>{{data.tracks.hits.[0]}}</p>
+        <p>Please enter a name of a term to look up the song</p>
+        <form action="/results">
+            <label for="userTerm" >Song or Artist term:</label>
+            <input type="text" id="userTerm" name="userTerm"><br><br>
+            <input type="submit" value="Submit">
+        </form>
+<!--        <p>{{data.tracks.hits.[2].track.title}}</p>-->
     </div>
 </body>
 </html>>

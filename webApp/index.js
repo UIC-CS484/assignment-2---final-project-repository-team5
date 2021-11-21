@@ -19,6 +19,7 @@ const deleteAccountRouter = require('./routes/deleteAccountPage')
 const errorAccountRouter = require('./routes/errorAccountPage')
 const dashboardRouter = require('./routes/dashboard')
 const axios = require("axios");
+const {log} = require("nodemon/lib/utils");
 
 // Linking routes to routers.
 app.use('/login',loginRouter)
@@ -65,36 +66,32 @@ app.get('/loginFormSubmit',(req, res)=>{
     //authenticate, re-route on success and failure
 })
 
-app.get('/dashboard',(req, res)=>{
-    // Make API call using axios
-    // Get the data
+app.get('/results',(req, res)=>{
+    console.log('INDEX-> /dashboard LOG')
+    console.log('__________________________________')
+    console.log(req.query.userTerm)
+    //TODO authenticate, re-route on success and failure
     const options = {
         method: 'GET',
         url: 'https://shazam.p.rapidapi.com/search',
-        params: {term: 'kiss the rain', locale: 'en-US', offset: '0', limit: '5'},
+        params: {term: req.query.userTerm, locale: 'en-US', offset: '0', limit: '5'},
         headers: {
             'x-rapidapi-host': 'shazam.p.rapidapi.com',
             'x-rapidapi-key': '7ae14268e5msh241a0d6655ae5fdp1aaa57jsnefdf711c7928'
         }
     };
 
-
-    showCharacters = characters => {
-        const charactersDiv = document.querySelector('#rick-and-morty-characters');
-        characters.forEach(character => {
-            const characterElement = document.createElement('p');
-            characterElement.innerText = `Character Name: Annsh}`;
-            charactersDiv.append(characterElement);
-        });
-    }
-
     axios.request(options).then(function (response) {
         console.log(JSON.stringify(response.data));
-        res.render('dashboard', {data:response.data})
+        res.render('results', {data:response.data})
     }).catch(function (error) {
         console.error(error);
     });
 
+})
+
+app.get('/dashboard',(req, res)=>{
+    res.render('dashboard')
 })
 
 // Run server

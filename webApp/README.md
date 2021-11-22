@@ -31,4 +31,4 @@ and engage with the music they love.
 ### SQLite
 
 ### Entity Relationship Diagram
-![WebApp](WebApp_ERD.png)
+![WebApp](WebApp_ERDiagram.png)

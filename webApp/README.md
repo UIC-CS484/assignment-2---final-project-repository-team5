@@ -9,7 +9,7 @@ as best we could. There were some requirements of assignment 2
 that are still incomplete right now, but we are working on them.
 They will be fixed for the final project.
 
-We have created a sample dashboard page that is directly by calling /dashboard 
+We have created a sample dashboard page that is directly accessed by calling /dashboard 
 (so that you can grade us for assignment 3's requirements. We ran into some 
 login trouble in assignment 2, and thus we have made this page public for now.)
 You can test our API call from this page.

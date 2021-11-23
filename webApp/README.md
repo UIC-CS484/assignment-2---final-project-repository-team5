@@ -1,5 +1,10 @@
 # WebApp Assignment 2
 
+# Team Members:
+Annsh Agrawaal
+Sahil Gedam
+Aryan Thaman
+
 ### Note to professor for grading
 
 We ran into some trouble while creating accounts for new users.
@@ -27,6 +32,7 @@ Music Center is a one-stop shop for music lovers who can listen, share,
 and engage with the music they love.
 
 ### API
+We made use of the Shazam Music API ![Shazam API](https://rapidapi.com/apidojo/api/shazam) to get the list of the top 5 most streamed music based on the artist name or song name or song term entered by the user. We also plan to include similar music list and concerts of the artists in the webapp in the final project.
 
 ### SQLite
 

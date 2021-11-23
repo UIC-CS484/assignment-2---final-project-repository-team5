@@ -32,7 +32,7 @@ Music Center is a one-stop shop for music lovers who can listen, share,
 and engage with the music they love.
 
 ### API
-We made use of the Shazam Music API (https://rapidapi.com/apidojo/api/shazam) to get the list of the top 5 most streamed music based on the artist name or song name or song term entered by the user. We also plan to include similar music list and concerts of the artists in the webapp in the final project.
+We made use of the Shazam Music API (https://rapidapi.com/apidojo/api/shazam) to get the list of the top 5 most streamed music based on the artist name or song name or song term entered by the user. We also plan to include similar music list and concerts of the artists in the webapp in the final project. NOTE: We only have 500 free requests in a month to the API.
 
 ### SQLite
 

@@ -5,12 +5,16 @@
     "axios": "^0.24.0",
     "express": "^4.17.1",
     "hbs": "^4.1.2",
+    "passport": "^0.5.0",
+    "passport-local": "^1.0.0",
     "sqlite3": "^5.0.2"
   },
   "main": "index.js",
   "devDependencies": {
     "connect-sqlite3": "^0.9.12",
+    "cookie-parser": "^1.4.6",
     "express-session": "^1.17.2",
+    "http-errors": "^1.8.1",
     "nodemon": "^2.0.15"
   },
   "scripts": {

@@ -2,12 +2,40 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b529a05c-5a51-4d75-bbf0-3e1edac973e6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/webApp/routes/submit.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webApp/users.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webApp/views/confirmation.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webApp/database/task.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/webApp/database/task.sqlite" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webApp/database_function.js" beforeDir="false" afterPath="$PROJECT_DIR$/webApp/database_function.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webApp/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/webApp/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webApp/node_modules/http-errors/HISTORY.md" beforeDir="false" afterPath="$PROJECT_DIR$/webApp/node_modules/http-errors/HISTORY.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webApp/node_modules/http-errors/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/webApp/node_modules/http-errors/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webApp/node_modules/http-errors/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/webApp/node_modules/http-errors/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webApp/node_modules/http-errors/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/webApp/node_modules/http-errors/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webApp/node_modules/http-errors/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/webApp/node_modules/http-errors/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webApp/node_modules/toidentifier/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/webApp/node_modules/toidentifier/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webApp/node_modules/toidentifier/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/webApp/node_modules/toidentifier/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webApp/node_modules/toidentifier/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/webApp/node_modules/toidentifier/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webApp/node_modules/toidentifier/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/webApp/node_modules/toidentifier/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webApp/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/webApp/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webApp/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/webApp/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webApp/passport.js" beforeDir="false" afterPath="$PROJECT_DIR$/webApp/config/passport.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webApp/routes/loginFormSubmit.js" beforeDir="false" afterPath="$PROJECT_DIR$/webApp/routes/loginFormSubmit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webApp/views/createAccount.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/webApp/views/createAccount.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webApp/views/login.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/webApp/views/login.hbs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -21,6 +49,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/webApp" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -29,7 +58,11 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\aryan\Desktop\UIC\CS484\assignment-2---final-project-repository-team5\webApp" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\aryan\Desktop\UIC\CS484\assignment-2---final-project-repository-team5\webApp\config" />
       <recent name="C:\Users\aryan\Desktop\UIC Academics\UIC-CS\CS 484\assignment-2---final-project-repository-team5\webApp" />
     </key>
   </component>
@@ -43,6 +76,7 @@
       <updated>1634261009325</updated>
       <workItem from="1634261010782" duration="1112000" />
       <workItem from="1637526082052" duration="72000" />
+      <workItem from="1638760545379" duration="15486000" />
     </task>
     <servers />
   </component>

@@ -1,12 +1,96 @@
 <html>
 <head>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.6.2/dist/chart.min.js" integrity="sha256-D2tkh/3EROq+XuDEmgxOLW1oNxf0rLNlOwsPIUX+co4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
 </head>
-
+<title>Search results</title>
 <body>
 <div id="rick-and-morty-characters">
-    <h1>WELCOME TO YOUR DASHBOARD!!!</h1>
-    <p>Your first result: </p>
-    <p>{{data.tracks.hits.[0].track.title}}</p>
+    <h3>Search Results!</h3>
+
+    <h4>Results sorted by the date the track was released: </h4>
+    <p>1st Track {{data.data1.tracks.hits.[0].track.title}} by {{data.data1.tracks.hits.[0].track.subtitle}}</p>
+    <p>2nd Track {{data.data1.tracks.hits.[1].track.title}} by {{data.data1.tracks.hits.[1].track.subtitle}} </p>
+    <p>3rd Track {{data.data1.tracks.hits.[2].track.title}} by {{data.data1.tracks.hits.[2].track.subtitle}} </p>
+
+    <h4>The number of times the track was searched worldwide: </h4>
+    <p>{{data.data1.tracks.hits.[0].track.title}} by {{data.data1.tracks.hits.[0].track.subtitle}} was searched {{data.data2.[0].total}} times </p>
+    <p>{{data.data1.tracks.hits.[1].track.title}} by {{data.data1.tracks.hits.[1].track.subtitle}} was searched {{data.data2.[1].total}} times </p>
+    <p>{{data.data1.tracks.hits.[2].track.title}} by {{data.data1.tracks.hits.[2].track.subtitle}} was searched {{data.data2.[2].total}} times </p>
+<!--    <img src="https://quickchart.io/chart?c={type:'bar',data:{labels:['January','February', 'March','April', 'May'], datasets:[{label:'Dogs',data:[50,60,70,180,190]},{label:'Cats',data:[100,200,300,400,500]}]}}">-->
 </div>
+<div class="container">
+    <canvas id="myChart" width="250" height="250"></canvas>
+    <script>
+        let myChart = document.getElementById('myChart').getContext('2d');
+
+        <!--let myArray= JSON.parse({{data.data2.[0].total}});-->
+        let myArray=[];
+        myArray.push({{data.data2.[0].total}});
+        myArray.push({{data.data2.[1].total}});
+        myArray.push({{data.data2.[2].total}});
+        let massPopChart = new Chart(myChart, {
+            type:'doughnut', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
+            data:{
+                labels:['1st Track', '2nd Track', '3rd Track'],
+                datasets:[{
+                    label:'Number of times the track was searched',
+                    data:myArray
+                    //         [
+                    //     617594,
+                    //     181045,
+                    //     153060,
+                    //     106519,
+                    //     105162,
+                    //     95072
+                    // ]
+                    ,
+                    //backgroundColor:'green',
+                    backgroundColor:[
+                        'rgba(255, 99, 132, 0.6)',
+                        'rgba(54, 162, 235, 0.6)',
+                        'rgba(255, 206, 86, 0.6)',
+                        'rgba(75, 192, 192, 0.6)',
+                        'rgba(153, 102, 255, 0.6)',
+                        'rgba(255, 159, 64, 0.6)',
+                        'rgba(255, 99, 132, 0.6)'
+                    ],
+                    borderWidth:1,
+                    borderColor:'#777',
+                    hoverBorderWidth:3,
+                    hoverBorderColor:'#000'
+                }]
+            },
+            options:{
+                title:{
+                    display:true,
+                    text:'Largest Cities In Massachusetts',
+                    fontSize:25
+                },
+                legend:{
+                    display:true,
+                    position:'right',
+                    labels:{
+                        fontColor:'#000'
+                    }
+                },
+                layout:{
+                    padding:{
+                        left:50,
+                        right:0,
+                        bottom:0,
+                        top:0
+                    }
+                },
+                tooltips:{
+                    enabled:true
+                }
+            }
+        });
+    </script>
+</div>
+
+
+
 </body>
 </html>

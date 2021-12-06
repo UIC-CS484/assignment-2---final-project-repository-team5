@@ -96,7 +96,6 @@ app.get('/results',(req, res)=>{
                     'x-rapidapi-key': '7ae14268e5msh241a0d6655ae5fdp1aaa57jsnefdf711c7928'
                 }
             };
-
             responses.push(await axios.request(options2))
         }
 

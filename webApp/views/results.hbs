@@ -6,37 +6,45 @@
 <title>Search results</title>
 <body>
 <div id="rick-and-morty-characters">
-    <h1>WELCOME TO YOUR DASHBOARD!!!</h1>
-    <p>1st Track {{data.tracks.hits.[0].track.title}} by {{data.tracks.hits.[0].track.subtitle}}</p>
-    <p>{{data.tracks.hits.[0].artist.avatar}}</p>
-    <p>2nd Track {{data.tracks.hits.[1].track.title}} by {{data.tracks.hits.[1].track.subtitle}} </p>
+    <h3>Search Results!</h3>
 
-    <p>3rd Track {{data.tracks.hits.[2].track.title}} by {{data.tracks.hits.[2].track.subtitle}} </p>
+    <h4>Results sorted by the date the track was released: </h4>
+    <p>1st Track {{data.data1.tracks.hits.[0].track.title}} by {{data.data1.tracks.hits.[0].track.subtitle}}</p>
+    <p>2nd Track {{data.data1.tracks.hits.[1].track.title}} by {{data.data1.tracks.hits.[1].track.subtitle}} </p>
+    <p>3rd Track {{data.data1.tracks.hits.[2].track.title}} by {{data.data1.tracks.hits.[2].track.subtitle}} </p>
 
+    <h4>The number of times the track was searched worldwide: </h4>
+    <p>{{data.data1.tracks.hits.[0].track.title}} by {{data.data1.tracks.hits.[0].track.subtitle}} was searched {{data.data2.[0].total}} times </p>
+    <p>{{data.data1.tracks.hits.[1].track.title}} by {{data.data1.tracks.hits.[1].track.subtitle}} was searched {{data.data2.[1].total}} times </p>
+    <p>{{data.data1.tracks.hits.[2].track.title}} by {{data.data1.tracks.hits.[2].track.subtitle}} was searched {{data.data2.[2].total}} times </p>
 <!--    <img src="https://quickchart.io/chart?c={type:'bar',data:{labels:['January','February', 'March','April', 'May'], datasets:[{label:'Dogs',data:[50,60,70,180,190]},{label:'Cats',data:[100,200,300,400,500]}]}}">-->
-
 </div>
 <div class="container">
-    <canvas id="myChart" width="400" height="400"></canvas>
+    <canvas id="myChart" width="250" height="250"></canvas>
     <script>
         let myChart = document.getElementById('myChart').getContext('2d');
 
-        // Global Options
-
+        <!--let myArray= JSON.parse({{data.data2.[0].total}});-->
+        let myArray=[];
+        myArray.push({{data.data2.[0].total}});
+        myArray.push({{data.data2.[1].total}});
+        myArray.push({{data.data2.[2].total}});
         let massPopChart = new Chart(myChart, {
             type:'doughnut', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
             data:{
-                labels:['Boston', 'Worcester', 'Springfield', 'Lowell', 'Cambridge', 'New Bedford'],
+                labels:['1st Track', '2nd Track', '3rd Track'],
                 datasets:[{
-                    label:'Population',
-                    data:[
-                        617594,
-                        181045,
-                        153060,
-                        106519,
-                        105162,
-                        95072
-                    ],
+                    label:'Number of times the track was searched',
+                    data:myArray
+                    //         [
+                    //     617594,
+                    //     181045,
+                    //     153060,
+                    //     106519,
+                    //     105162,
+                    //     95072
+                    // ]
+                    ,
                     //backgroundColor:'green',
                     backgroundColor:[
                         'rgba(255, 99, 132, 0.6)',

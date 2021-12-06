@@ -81,8 +81,43 @@ app.get('/results',(req, res)=>{
         }
     };
 
+    const options2 = {
+        method: 'GET',
+        url: 'https://shazam.p.rapidapi.com/songs/get-count',
+        params: {key: id},
+        headers: {
+            'x-rapidapi-host': 'shazam.p.rapidapi.com',
+            'x-rapidapi-key': '7ae14268e5msh241a0d6655ae5fdp1aaa57jsnefdf711c7928'
+        }
+    };
+//////////////////////////
+    class Example {
+        async asyncMethod() {
+            const data = await axios.request(options);
+            return data
+        }
+    }
+
+    const exampleClass = new Example();
+    exampleClass.asyncMethod().then((response) => {
+        id = response.tracks.hits.[0].track.key;
+        return axios.request(options2)
+    }).then((response) => {
+        res.render('results', {data:response.data})
+    }).catch(function (error) {
+        console.error(error);
+
+    axios.request(options).then((response) => {
+            return axios.get(...); // using response.data
+        })
+        .then((response) => {
+            res.render('results', {data:response.data})
+        }).catch(function (error) {
+        console.error(error);
+    });
+//////////////////////////////////////////
     axios.request(options).then(function (response) {
-        console.log(JSON.stringify(response.data));
+        // console.log(JSON.stringify(response.data));
         res.render('results', {data:response.data})
     }).catch(function (error) {
         console.error(error);
